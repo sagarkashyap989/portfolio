@@ -1,0 +1,100 @@
+@use './utils/' as u;
+@import './utils/index.scss';
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Kreon', serif;
+font-family: 'Kumbh Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    background-color: #171820;
+    background-image: url('./../app/images/3px-tile.png');
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+.container {
+
+    padding-inline: u.rem(24);
+    padding-top: u.rem(16);
+    padding-bottom: u.rem(16);
+
+
+    @include u.breakpoint-up(small) {
+        padding-inline: 6.6rem;
+    }
+
+    @include u.breakpoint-up(large) {
+        padding-inline: 9.5rem;
+    }
+
+    &__x {
+        @include u.breakpoint-up(large) {
+            padding-inline: 9.5rem;
+        }
+    }
+
+}
+
+p,h1,h2,h3,h4,h5,h6,a,span{
+    color:#ecfced
+}
+
+
+
+
+.landing-btn-con{
+background-color: #ff6663;
+}
+
+.landing-btn-typo{
+    font-size: 1.1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  margin:auto
+}
+
+
+// .img-div{
+//     background: url('./../app/images/vecteezy_online-learning-from-home-studying-through-video-conference_5607817-removebg.png') no-repeat 0 0;
+// }
+
+// .neg-margin{
+//     margin-bottom: -63px !important;
+// }
+
+
+.delay1{
+    animation-delay: 200ms;
+}
+
+
+.delay2{
+    animation-delay: 400ms;
+}
+
+.delay3{
+    animation-delay: 600ms;
+}
+
+.delay4{
+    animation-delay: 800ms;
+}
+.delay5{
+    animation-delay: 1000ms;
+}
