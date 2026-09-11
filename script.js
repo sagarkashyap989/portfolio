@@ -7,6 +7,14 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+/** Escape HTML, then turn **bold** into <strong>bold</strong>. */
+function formatText(value) {
+  return escapeHtml(value).replace(
+    /\*\*(.+?)\*\*/g,
+    "<strong>$1</strong>"
+  );
+}
+
 function isExternal(href) {
   return /^https?:\/\//i.test(href);
 }
@@ -23,14 +31,14 @@ function renderLink(link, className = "") {
     .filter(Boolean)
     .join(" ");
 
-  return `<a ${attrs}>${escapeHtml(link.label)}</a>`;
+  return `<a ${attrs}>${formatText(link.label)}</a>`;
 }
 
 function renderSectionHeading(number, title) {
   return `
     <div class="section-heading">
       <span>${escapeHtml(number)}</span>
-      <h2>${escapeHtml(title)}</h2>
+      <h2>${formatText(title)}</h2>
     </div>
   `;
 }
@@ -38,7 +46,7 @@ function renderSectionHeading(number, title) {
 function renderNav(data) {
   document.querySelector(".logo").textContent = data.meta.logo;
   document.querySelector("nav").innerHTML = data.nav
-    .map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`)
+    .map((item) => `<a href="${escapeHtml(item.href)}">${formatText(item.label)}</a>`)
     .join("");
 }
 
@@ -49,12 +57,12 @@ function renderHero(data) {
   container.innerHTML = `
     <div class="hero-layout">
       <div class="hero-copy">
-        <p class="eyebrow">${escapeHtml(hero.eyebrow)}</p>
+        <p class="eyebrow">${formatText(hero.eyebrow)}</p>
         <h1>
-          ${escapeHtml(hero.greeting)}
-          <span>${escapeHtml(hero.name)}</span>
+          ${formatText(hero.greeting)}
+          <span>${formatText(hero.name)}</span>
         </h1>
-        <p class="hero-description">${escapeHtml(hero.description)}</p>
+        <p class="hero-description">${formatText(hero.description)}</p>
         <div class="hero-links">
           ${hero.links
             .map((link) =>
@@ -91,14 +99,14 @@ function renderExperience(data) {
           <article class="experience-item">
             <div class="experience-header">
               <div>
-                <h3>${escapeHtml(item.role)}</h3>
-                <p class="company">${escapeHtml(item.company)}</p>
+                <h3>${formatText(item.role)}</h3>
+                <p class="company">${formatText(item.company)}</p>
               </div>
-              <span class="date">${escapeHtml(item.date)}</span>
+              <span class="date">${formatText(item.date)}</span>
             </div>
             <ul>
               ${item.bullets
-                .map((bullet) => `<li>${escapeHtml(bullet)}</li>`)
+                .map((bullet) => `<li>${formatText(bullet)}</li>`)
                 .join("")}
             </ul>
           </article>
@@ -122,19 +130,19 @@ function renderProjects(data) {
               ${String(index + 1).padStart(2, "0")}
             </div>
             <div class="project-content">
-              <p class="project-type">${escapeHtml(project.type)}</p>
-              <h3>${escapeHtml(project.name)}</h3>
+              <p class="project-type">${formatText(project.type)}</p>
+              <h3>${formatText(project.name)}</h3>
               <div class="tags">
                 ${project.tags
-                  .map((tag) => `<span>${escapeHtml(tag)}</span>`)
+                  .map((tag) => `<span>${formatText(tag)}</span>`)
                   .join("")}
               </div>
-              <p>${escapeHtml(project.description)}</p>
+              <p>${formatText(project.description)}</p>
               <div class="project-details">
                 <h4>What I built</h4>
                 <ul>
                   ${project.built
-                    .map((item) => `<li>${escapeHtml(item)}</li>`)
+                    .map((item) => `<li>${formatText(item)}</li>`)
                     .join("")}
                 </ul>
               </div>
@@ -160,8 +168,8 @@ function renderSkills(data) {
         .map(
           (group) => `
             <div class="skill-group">
-              <h3>${escapeHtml(group.title)}</h3>
-              <p>${group.items.map(escapeHtml).join(" · ")}</p>
+              <h3>${formatText(group.title)}</h3>
+              <p>${group.items.map(formatText).join(" · ")}</p>
             </div>
           `
         )
@@ -181,9 +189,9 @@ function renderEducation(data) {
         (item) => `
           <article class="education-item">
             <div>
-              <h3>${escapeHtml(item.degree)}</h3>
+              <h3>${formatText(item.degree)}</h3>
             </div>
-            <span class="date">${escapeHtml(item.date)}</span>
+            <span class="date">${formatText(item.date)}</span>
           </article>
         `
       )
@@ -197,9 +205,9 @@ function renderContact(data) {
 
   container.innerHTML = `
     ${renderSectionHeading(section.number, section.title)}
-    <p class="contact-description">${escapeHtml(section.description)}</p>
+    <p class="contact-description">${formatText(section.description)}</p>
     <a href="mailto:${escapeHtml(section.email)}" class="contact-email">
-      ${escapeHtml(section.email)}
+      ${formatText(section.email)}
     </a>
     <div class="social-links">
       ${section.links.map((link) => renderLink(link)).join("")}
@@ -210,8 +218,8 @@ function renderContact(data) {
 function renderFooter(data) {
   const footer = data.footer;
   document.querySelector(".footer-content").innerHTML = `
-    <p>${escapeHtml(footer.copyright)}</p>
-    <p>${escapeHtml(footer.tagline)}</p>
+    <p>${formatText(footer.copyright)}</p>
+    <p>${formatText(footer.tagline)}</p>
   `;
 }
 
