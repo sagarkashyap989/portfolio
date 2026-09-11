@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Sagar Kashyap | Software Developer",
+    "description": "Sagar Kashyap — Software Developer specializing in React, Next.js, Node.js, ASP.NET Core and AI-powered applications.",
+    "logo": "SK"
+  },
+  "nav": [
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Education", "href": "#education" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "eyebrow": "SOFTWARE DEVELOPER",
+    "greeting": "Hey, I'm",
+    "name": "Sagar Kashyap.",
+    "description": "Software Developer with experience building full-stack applications, internal ERP systems, dashboards and AI-powered applications using React, Next.js, Node.js, ASP.NET Core and modern AI tooling.",
+    "image": "assets/profile.png",
+    "imageAlt": "Sagar Kashyap",
+    "links": [
+      {
+        "label": "Get in touch",
+        "href": "mailto:saga11kashyap@gmail.com",
+        "primary": true
+      },
+      {
+        "label": "GitHub ↗",
+        "href": "https://github.com/sagarkashyap989",
+        "external": true
+      },
+      {
+        "label": "LinkedIn ↗",
+        "href": "https://www.linkedin.com/in/sagar-kashyap-525790266",
+        "external": true
+      },
+      {
+        "label": "Resume ↓",
+        "href": "resume.pdf",
+        "download": true
+      }
+    ]
+  },
+  "experience": {
+    "number": "01",
+    "title": "Work Experience",
+    "items": [
+      {
+        "role": "Software Developer",
+        "company": "Kasyap Sweetners Ltd., Mumbai",
+        "date": "Dec 2024 — Present",
+        "bullets": [
+          "Worked on the development of a new internal ERP system, contributing to system architecture, backend services and frontend workflows used by multiple departments.",
+          "Introduced Redux Toolkit and RTK Query to stabilize frontend state management and improve UI and data consistency.",
+          "Built reusable UI components including dynamic tables, configurable dropdowns and shared form validation utilities.",
+          "Developed and integrated core ERP modules using ASP.NET Core, SQL Server and React with TypeScript.",
+          "Wrote and maintained unit tests for frontend and backend components using Jest and Moq."
+        ]
+      },
+      {
+        "role": "Software Developer",
+        "company": "Brainwonders Ltd Pvt., Borivali, Mumbai",
+        "date": "Nov 2023 — Nov 2024",
+        "bullets": [
+          "Developed an admissions dashboard with filtering and reporting features while working closely with backend APIs and optimizing SQL queries.",
+          "Assisted in migrating an existing React application to Next.js, including routing changes, SSR setup and basic build optimizations.",
+          "Improved application maintainability by refactoring legacy components and increasing component structure and reusability."
+        ]
+      },
+      {
+        "role": "Full Stack Developer",
+        "company": "Weblord Infotech Pvt. Ltd., Mumbai",
+        "date": "Oct 2022 — Oct 2023",
+        "bullets": [
+          "Worked on a live real-estate web portal, housingmagic.com, contributing to frontend features and backend integrations.",
+          "Wrote and maintained API documentation using Swagger Hub to support internal development and onboarding.",
+          "Integrated the Google Maps API to implement location-based property search and nearby property discovery."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "number": "02",
+    "title": "Selected Projects",
+    "items": [
+      {
+        "type": "AI / RAG APPLICATION",
+        "name": "YT RAG",
+        "tags": [
+          "RAG",
+          "LangChain",
+          "LangGraph",
+          "PostgreSQL",
+          "pgvector",
+          "Vercel Workflows"
+        ],
+        "description": "A RAG-powered learning assistant that provides semantic search across WDS videos and articles and answers questions using relevant content with grounded references.",
+        "built": [
+          "Semantic search using AI embeddings, PostgreSQL and pgvector.",
+          "Context-aware AI assistant that retrieves relevant content chunks.",
+          "Grounded references to video timestamps and article sections.",
+          "Durable workflows for ingestion, chunking, embeddings, retries and database persistence.",
+          "GitHub OAuth and rate limiting for secure access and controlled AI/API usage."
+        ],
+        "links": [ 
+          {
+            "label": "GitHub ↗",
+            "href": "https://github.com/sagarkashyap989"
+          }
+        ]
+      },
+      {
+        "type": "AI-POWERED LEARNING",
+        "name": "Syllabrain",
+        "tags": ["AI", "LLM", "OCR", "Structured Output"],
+        "description": "An AI-powered textbook and syllabus platform that uses OCR and LLMs to transform images into structured learning content.",
+        "built": [
+          "AI syllabus platform using LLMs and OCR.",
+          "Converted images into structured learning content.",
+          "Implemented reliable LLM response formatting.",
+          "Generated structured JSON hierarchies covering semesters, modules and units."
+        ],
+        "links": [
+          {
+            "label": "GitHub ↗",
+            "href": "https://github.com/sagarkashyap989"
+          }
+        ]
+      },
+      {
+        "type": "AI-POWERED PRODUCTIVITY",
+        "name": "AI Whiteboard",
+        "tags": [
+          "AI",
+          "LLM",
+          "React",
+          "Node.js",
+          "Canvas",
+          "Real-time Collaboration"
+        ],
+        "description": "An AI-powered collaborative whiteboard that helps users visually organize ideas, generate content, and interact with their canvas using natural language.",
+        "built": [
+          "Interactive whiteboard with support for drawing, shapes, text and visual elements.",
+          "AI assistant that interprets natural-language instructions and generates or modifies whiteboard content.",
+          "Integrated LLM-powered workflows for transforming user ideas into structured visual content.",
+          "Implemented real-time canvas interactions with a responsive and intuitive editing experience.",
+          "Built reusable frontend components and backend APIs for managing whiteboard state and AI operations."
+        ],
+        "links": [
+       
+          {
+            "label": "GitHub ↗",
+            "href": "https://github.com/sagarkashyap989"
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "number": "03",
+    "title": "Technical Skills",
+    "groups": [
+      {
+        "title": "Programming",
+        "items": ["JavaScript", "C#"]
+      },
+      {
+        "title": "Frontend",
+        "items": ["React.js", "Next.js", "Redux", "React Testing Library"]
+      },
+      {
+        "title": "Backend",
+        "items": ["Node.js", "ASP.NET Core", "FastAPI", "Python"]
+      },
+      {
+        "title": "AI & LLM",
+        "items": ["LangChain", "LangGraph", "Guardrail"]
+      },
+      {
+        "title": "Databases",
+        "items": ["MongoDB", "SQL", "PostgreSQL", "Prisma", "pgvector"]
+      },
+      {
+        "title": "APIs & Tools",
+        "items": ["APIs", "Swagger Hub", "Postman", "Git", "NPM", "SQL Profiler"]
+      }
+    ]
+  },
+  "education": {
+    "number": "04",
+    "title": "Education",
+    "items": [
+      {
+        "degree": "M.S.C., Computer Science",
+        "date": "May 2024 — May 2026"
+      },
+      {
+        "degree": "B.S.C., Computer Science",
+        "date": "Aug 2021 — May 2024"
+      }
+    ]
+  },
+  "contact": {
+    "number": "05",
+    "title": "Let's work together",
+    "description": "I'm open to opportunities where I can work on full-stack applications, scalable backend systems and AI-powered products.",
+    "email": "saga11kashyap@gmail.com",
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/sagarkashyap989"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/sagar-kashyap-525790266"
+      },
+      {
+        "label": "Email",
+        "href": "mailto:saga11kashyap@gmail.com"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Sagar Kashyap",
+    "tagline": "Software Developer"
+  }
+}
